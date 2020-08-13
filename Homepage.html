@@ -1,69 +1,44 @@
 <html>
 <head>
     <title> Tasty Cakes </title>
-    <style>
-        body{
-            margin: 10px ;
-            padding: 20px ;
-            
-        }
-
-        input{
-            padding: 10px ;
-            margin: 10px ;
-            border: 1px solid #96dcff9c ;
-            border-radius: 10px ;
-            font-size: 6vh ;
-            width: 50vw;
-            height: 7vh;
-            font-size: 20px ;
-
-        }
-        input:hover{
-
-            transform : scale(1.04) ;
-            transition: transform 0.1s;
-            border: ;
-
-        }
-        
-        #ButtonsNav{
-            margin: inherit ;
-            padding: inherit ;
-            border-width: thick ;
-            border-color:  black ;
-            border:inherit ;
-            border-radius: 5px ;
-            font-size: 30px ;
-        }
-        
-        #SearchBar{
-            margin :inherit ;
-            padding: inherit ;
-        }
-
-
-        #ResultArea{
-            margin: inherit ;
-            padding: inherit ;
-            border: inherit ;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <script src="/Actions.js"></script>
 </head>
     
 <body>
-    
+    <p> Our Store </p>
     <div id = "ButtonsNav">
-        Nav Button 
+        <div id = "VarietyButtons">
+            <button>
+                ALL
+            </button> 
+            <button>
+                CAKES
+            </button> 
+            <button>
+                CUPCAKES
+            </button> 
+            <button>
+                SWEETS
+            </button> 
+            <button>
+                DOUGHNUTS
+            </button> 
+        </div>
     </div>
+    <form action="" name = "SearchBarInput" id = "SearchBar">
+        <input type="text" name = "SearchValue" id = "SearchBarInput" placeholder = "Eg. Cheese Cake" oninput="SearchResult">
+    </form>
+  <div id = "ResultArea">
+      
     
-    <div id = "SearchBar">
-        <input type="text" name = "SearchValue" id = "SearchBarInput" placeholder = "Eg. Cheese Cake">
-    </div>
-    
-    <div id = "ResultArea">
-       Search Results Here !!
-    </div>
+
+  </div>
     
 </body>
 </html>

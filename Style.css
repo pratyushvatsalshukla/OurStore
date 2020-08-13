@@ -1,0 +1,96 @@
+body{
+ 
+     font-family: "Comic Sans MS", "Comic Sans", cursive;
+     background-color: white;
+     margin: auto ;
+     
+}
+p{
+    margin: auto;
+    padding: 20px ;
+    width: 28%;
+    font-size: 5vw;
+}
+
+
+input{
+    padding: 10px ;
+    margin: 10px ;
+    margin-left: 0 ;
+    border: 1px solid black ;
+    border-radius: 10px ;
+    font-size: 3vh ;
+    width: 50vw;
+    height: 6vh;
+
+}
+
+button{
+    display: inline-block ;
+    margin: 0 20 40;
+    padding: 1px ;
+    border : 1px solid black ;
+    border-radius: 5px ;
+    background-color: white ;
+    display: inline-table;
+}
+
+#VarietyButtons{
+    margin: auto ;
+    width: 50% ;
+}
+
+img{
+
+    border-radius: 25px ;
+    
+}
+
+button:hover, input:hover{
+    transform : scale(1.04) ;
+    transition: transform 0.1s; 
+    background-color: white;
+    
+}
+
+img:hover{
+    transform : scale(1.2) ;
+    transition: transform 0.3s;
+}
+
+.CardData{
+    padding: 1px ;
+    margin: 5px ;
+    
+}
+
+
+#ButtonsNav{
+    margin: inherit ;
+    padding: 10px ; 
+    border-width: thick ;
+    border-color:  black ;
+    border:inherit ;
+    border-radius: 5px ;
+    font-size: 30px ;
+}
+
+#SearchBar{
+    margin: inherit;
+    padding: 10px ; 
+    width: 50% ;
+    
+}
+
+#ResultArea{
+    margin: inherit ;
+    padding: 20px ; 
+    border: inherit ;
+    
+}
+
+.RecepieImages{
+    padding: 10px ;
+    margin: 10px ;
+}
+
