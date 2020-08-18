@@ -16,16 +16,16 @@
             <button>
                 ALL
             </button> 
-            <button>
+            <button id = "CakeHere" onclick="DisplayCurrent(id)">
                 CAKES
             </button> 
-            <button>
+            <button id = "CupCakeHere" onclick="DisplayCurrent(id)">
                 CUPCAKES
             </button> 
-            <button>
+            <button id = "SweetsHere" onclick="DisplayCurrent(id)">
                 SWEETS
             </button> 
-            <button>
+            <button id = "BoughnutHere" onclick="DisplayCurrent(id)">
                 DOUGHNUTS
             </button> 
         </div>
@@ -37,44 +37,61 @@
       
   <div class="row">
       <div class="col-sm-4">
-          <img src = "./images/Sweets-2.jpg" alt="Sweet" class = "imgg"/>
+          <img src = "./images/Sweets-2.jpg" alt="Sweets" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/CupCakes.jpg" alt="Cupcake" class = "imgg"/>
+            <img src = "./images/CupCakes.jpg" alt="Cupcakes" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/Sweets.webp" alt="Sweet" class = "imgg"/>
+            <img src = "./images/Sweets.webp" alt="Sweets" class = "imgg"/>
       </div>
   </div>
   <div class="row">
       <div class="col-sm-4">
-          <img src = "./images/Cake-2.jpg" alt="cake" class = "imgg"/>
+          <img src = "./images/Cake-2.jpg" alt="cakes" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/CupCakes-2.jpg" alt="Cupcake" class = "imgg"/>
+            <img src = "./images/CupCakes-2.jpg" alt="Cupcakes" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/Cake.jpg" alt="cake" class = "imgg"/>
+            <img src = "./images/Cake.jpg" alt="cakes" class = "imgg"/>
       </div>
   </div>
     <div class="row">
           <div class="col-sm-4">
-              <img src = "./images/Doughnuts.jpg" alt="Doughnut" class = "imgg"/>
+              <img src = "./images/Doughnuts.jpg" alt="Doughnuts" class = "imgg"/>
           </div>
           <div class="col-sm-4">
-                <img src = "./images/Doughnuts-2.jfif" alt="Doughnut" class = "imgg"/>
+                <img src = "./images/Doughnuts-2.jfif" alt="Doughnuts" class = "imgg"/>
           </div>
           <div class="col-sm-4">
-                <img src = "./images/Doughnuts-3.jfif" alt="Doughnut" class = "imgg"/> 
+                <img src = "./images/Doughnuts-3.jfif" alt="Doughnuts" class = "imgg"/> 
           </div>
     </div>
-
 </div>
 <script>
 
     const SearchResult = () =>{
 
             var InputText = document.getElementById('myInput').value.toLowerCase() ;
+            var DivContainer = document.getElementById('ResultArea') ;
+            var DivRow = DivContainer.getElementsByTagName('img') ;
+            for(var i = 0 ; i < DivRow.length ; i++)
+            {
+                var Current = DivRow[i].getAttribute('alt') ;
+                if( Current.toLowerCase().indexOf(InputText) > -1 )
+                {
+                    DivRow[i].style.display = '' ;
+                }
+                else
+                {
+                    DivRow[i].style.display = 'none' ;
+                }
+            }
+    }
+    const DisplayCurrent = (CurrentId) =>{
+
+        var InputText = document.getElementById(CurrentId).innerText.toLowerCase() ;
             var DivContainer = document.getElementById('ResultArea') ;
             var DivRow = DivContainer.getElementsByTagName('img') ;
             for(var i = 0 ; i < DivRow.length ; i++)
