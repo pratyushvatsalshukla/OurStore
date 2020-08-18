@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
   <title> Tasty Cakes </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,33 +31,67 @@
         </div>
     </div>
     <form action="" name = "SearchBarInput" id = "SearchBar">
-        <input type="text" name = "SearchValue" id = "SearchBarInput" placeholder = "Eg. Cheese Cake" oninput="SearchResult">
+        <input type="text" name = "SearchValue" id = "myInput" placeholder = "Eg. Cheese Cake" onkeyup="SearchResult()">
     </form>
 <div id = "ResultArea" class="container">
       
   <div class="row">
       <div class="col-sm-4">
-          <img src = "./images/Sweets-2.jpg"/>
+          <img src = "./images/Sweets-2.jpg" alt="Sweet" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/CupCakes.jpg"/>
+            <img src = "./images/CupCakes.jpg" alt="Cupcake" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/Sweets.webp"/>
+            <img src = "./images/Sweets.webp" alt="Sweet" class = "imgg"/>
       </div>
   </div>
   <div class="row">
       <div class="col-sm-4">
-          <img src = "./images/Cake-2.jpg"/>
+          <img src = "./images/Cake-2.jpg" alt="cake" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/CupCakes-2.jpg"/>
+            <img src = "./images/CupCakes-2.jpg" alt="Cupcake" class = "imgg"/>
       </div>
       <div class="col-sm-4">
-            <img src = "./images/Cake.jpg"/>
+            <img src = "./images/Cake.jpg" alt="cake" class = "imgg"/>
       </div>
   </div>
+    <div class="row">
+          <div class="col-sm-4">
+              <img src = "./images/Doughnuts.jpg" alt="Doughnut" class = "imgg"/>
+          </div>
+          <div class="col-sm-4">
+                <img src = "./images/Doughnuts-2.jfif" alt="Doughnut" class = "imgg"/>
+          </div>
+          <div class="col-sm-4">
+                <img src = "./images/Doughnuts-3.jfif" alt="Doughnut" class = "imgg"/> 
+          </div>
+    </div>
 
 </div>
+<script>
+
+    const SearchResult = () =>{
+
+            var InputText = document.getElementById('myInput').value.toLowerCase() ;
+            var DivContainer = document.getElementById('ResultArea') ;
+            var DivRow = DivContainer.getElementsByTagName('img') ;
+            for(var i = 0 ; i < DivRow.length ; i++)
+            {
+                var Current = DivRow[i].getAttribute('alt') ;
+                if( Current.toLowerCase().indexOf(InputText) > -1 )
+                {
+                    DivRow[i].style.display = '' ;
+                }
+                else
+                {
+                    DivRow[i].style.display = 'none' ;
+                }
+            }
+
+    }
+
+</script>
 </body>
 </html>

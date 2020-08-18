@@ -6,6 +6,7 @@ body{
 /*    background-color: #09fffa33 ;*/
     background: url(images/BodyBackground.jpg) ;
     background-size: cover ;
+    background-repeat: unset;
 /*     background-repeat: no-repeat ;*/
 }
 
@@ -64,8 +65,9 @@ button:hover, input:hover{
 }
 
 img:hover{
-    transform : scale(1.2) ;
+    transform : scale(1.009) ;
     transition: transform 0.3s;
+    box-shadow:-1px 0px 20px ;
 }
 
 .CardData{
@@ -99,7 +101,10 @@ img{
     height: 30vh ;
     width: 16vw ;
     margin-top:5vh ;
-    border-radius: 20%
-    
+    border-radius: 20%  
 }
 
+.col-sm-4{
+    text-align: center ;
+    
+}
