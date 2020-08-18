@@ -30,18 +30,34 @@
             </button> 
         </div>
     </div>
-    <form action="" name = "SearchBarInput" id = "MyInput">
-        <input type="text" name = "SearchValue" id = "SearchBarInput" placeholder = "Eg. Cheese Cake" onkeyup="SearchFunction()">
+    <form action="" name = "SearchBarInput" id = "SearchBar">
+        <input type="text" name = "SearchValue" id = "SearchBarInput" placeholder = "Eg. Cheese Cake" oninput="SearchResult">
     </form>
-<div id = "ResultArea">
+<div id = "ResultArea" class="container">
       
-  
+  <div class="row">
+      <div class="col-sm-4">
+          <img src = "./images/Sweets-2.jpg"/>
+      </div>
+      <div class="col-sm-4">
+            <img src = "./images/CupCakes.jpg"/>
+      </div>
+      <div class="col-sm-4">
+            <img src = "./images/Sweets.webp"/>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-4">
+          <img src = "./images/Cake-2.jpg"/>
+      </div>
+      <div class="col-sm-4">
+            <img src = "./images/CupCakes-2.jpg"/>
+      </div>
+      <div class="col-sm-4">
+            <img src = "./images/Cake.jpg"/>
+      </div>
+  </div>
 
 </div>
-    <script>
-        const searchFun = () =>{
-            let filter = document.getElementById("MyInput").value() ;
-        }
-    </script>
 </body>
 </html>

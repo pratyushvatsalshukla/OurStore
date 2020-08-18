@@ -3,8 +3,10 @@ body{
      font-family: "Comic Sans MS", "Comic Sans", cursive;
      background-color: white;
      margin: auto ;
-    background-color: #09fffa33 ;
-     
+/*    background-color: #09fffa33 ;*/
+    background: url(images/BodyBackground.jpg) ;
+    background-size: cover ;
+/*     background-repeat: no-repeat ;*/
 }
 
 p{
@@ -20,7 +22,7 @@ input{
     padding: 10px ;
     margin: 10px ;
     margin-left: 0 ;
-    background-color: #00fda675;
+    background-color: #fdf00080;
     border: none ;
     border-radius: 10px ;
     font-size: 3vh ;
@@ -34,7 +36,7 @@ button{
     padding: 5px ;
     border : none;
     border-radius: 10px ;
-    background-color: #00fda675 ;
+    background-color: #fdf00080 ;
     display: inline-table ;
 }
 
@@ -56,7 +58,7 @@ img{
 button:hover, input:hover{
     transform : scale(1.01) ;
     transition: transform 0.1s; 
-    background-color: #00fd2642;
+    background-color: #d5e80e30;
     box-shadow: -1px 0px 10px ;
     
 }
@@ -90,14 +92,14 @@ img:hover{
 }
 
 #ResultArea{
-    margin: inherit ;
-    padding: 20px ; 
-    border: inherit ;
+
     
 }
-
-.RecepieImages{
-    padding: 10px ;
-    margin: 10px ;
+img{
+    height: 30vh ;
+    width: 16vw ;
+    margin-top:5vh ;
+    border-radius: 20%
+    
 }
 
